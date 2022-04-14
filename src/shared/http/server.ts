@@ -1,6 +1,6 @@
 import api from "./api/api";
 import constants from '../utils/constants';
+const port = constants.port
+const message = `init port: ${port}`;
 
-const message = 'init port %';
-
-api.listen(constants.port, () => console.log(message));
+api.listen(port, () => console.log(message));

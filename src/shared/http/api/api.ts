@@ -1,7 +1,7 @@
+import 'dotenv/config';
 import express from 'express';
+const app = express();
 
-const api = express();
+// app.use();
 
-// api.use();
-
-export default api;
+export default app;
