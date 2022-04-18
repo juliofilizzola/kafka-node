@@ -1,5 +1,5 @@
-import { Request, Response, Router } from "express";
-import produceController from "../controllers/produceController";
+import { Router } from 'express';
+import produceController from '../controllers/produceController';
 
 const ProduceRouter = Router();
 
