@@ -1,9 +1,8 @@
 import consumerService from "kafka/consumer/consumer";
 
-
 class ConsumerService {
   async execute() {
-    const service = consumerService()
+    let service = await consumerService()
     return service
   }
 }

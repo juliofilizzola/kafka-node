@@ -1,3 +1,4 @@
+import { IProducer } from "kafka/dtos";
 import kafka from "../../kafka-setup"
 
 const producer = kafka.producer()
@@ -7,14 +8,12 @@ async function run () {
 }
 run().catch(console.error)
 
-const producerService = async (): Promise<void> => {
-
+const producerService = async ({topic, message}: IProducer): Promise<void> => {
+  console.log({topic, message});
   
   await producer.send({
-    topic: 'kafka-studies',
-    messages: [
-      { value: 'Hello KafkaJS user!' },
-    ],
+    topic,
+    messages: message,
   })
 
   // await producer.disconnect();

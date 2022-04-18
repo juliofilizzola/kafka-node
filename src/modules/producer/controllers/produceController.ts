@@ -1,10 +1,15 @@
+import { Request, Response } from "express";
 import { container } from "tsyringe";
 import CreateProduce from "../services/CreateProduceService";
 
 class ProduceController {
-  async execute() {
+  async execute(req: Request, res: Response) {
     const produce = container.resolve(CreateProduce);
-    const result = produce.execute();
+    console.log(req.body);
+    
+    const { topic, message } = req.body;
+    produce.execute({ topic, message });
+    return res.json({ value: true })
   }
 }
 
