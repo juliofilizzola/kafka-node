@@ -1,6 +1,7 @@
-import api from "./app/app";
-import constants from '../utils/constants';
+import constants from "../utils/constants";
+import app from "./app/app";
+
 const port = constants.port
 const message = `init port: ${port}`;
 
-api.listen(port, () => console.log(message));
+app.listen(port, () => console.log(message));
