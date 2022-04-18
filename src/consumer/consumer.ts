@@ -1,16 +1,18 @@
 import kafka from '../kafka-setup';
 
-const producer = kafka.producer()
+const consumer = kafka.consumer({ groupId: 'test-group' })
 const consumerService = async (): Promise<void> => {
-  await producer.connect()
-  await producer.send({
-    topic: 'test-topic',
-    messages: [
-      { value: 'Hello KafkaJS user!' },
-    ],
-  })
+
+  await consumer.connect()
+  await consumer.subscribe({ topic: 'test-topic', fromBeginning: true })
   
-  await producer.disconnect()
+  await consumer.run({
+    eachMessage: async ({ topic, partition, message }) => {
+      console.log({
+        value: message.value?.toString(),
+      })
+    },
+  })
 }
 
 export default consumerService;
