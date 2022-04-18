@@ -1,4 +1,4 @@
-import kafka from '../kafka-setup';
+import kafka from '../../kafka-setup';
 
 const consumer = kafka.consumer({ groupId: 'test-group' })
 const consumerService = async (): Promise<void> => {

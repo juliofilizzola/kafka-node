@@ -1,4 +1,4 @@
-import kafka from "../kafka-setup"
+import kafka from "../../kafka-setup"
 
 const producer = kafka.producer()
 
