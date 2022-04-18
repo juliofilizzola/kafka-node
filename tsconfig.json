@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "src", // This must be specified if "paths" is.
+    "paths": {
+        "@app/*": ["app/*"],
+        "@config/*": ["app/_config/*"],
+        "@environment/*": ["environments/*"],
+        "@shared/*": ["app/_shared/*"],
+        "@helpers/*": ["helpers/*"]
+    },
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 
     /* Projects */

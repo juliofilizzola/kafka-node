@@ -2,17 +2,22 @@ import kafka from "../../kafka-setup"
 
 const producer = kafka.producer()
 
+async function run () {
+  await producer.connect()
+}
+run().catch(console.error)
+
 const producerService = async (): Promise<void> => {
 
-  await producer.connect();
+  
   await producer.send({
-    topic: 'test-topic',
+    topic: 'kafka-studies',
     messages: [
       { value: 'Hello KafkaJS user!' },
     ],
   })
 
-  await producer.disconnect();
+  // await producer.disconnect();
 };
 
 export default producerService;
