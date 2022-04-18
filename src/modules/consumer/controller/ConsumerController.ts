@@ -1,6 +1,6 @@
-import { Request, Response } from "express";
-import { container } from "tsyringe";
-import ConsumerService from "../service/ConsumerService";
+import { Request, Response } from 'express';
+import { container } from 'tsyringe';
+import ConsumerService from '../service/ConsumerService';
 
 class ConsumerController {
   async execute(req: Request, res: Response) {

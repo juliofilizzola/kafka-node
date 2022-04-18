@@ -5,5 +5,5 @@ export interface IProducer {
 
 interface IMessage {
   value: string;
-  key?: string
+  key?: string;
 }

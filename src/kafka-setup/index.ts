@@ -6,7 +6,7 @@ const kafka = new Kafka({
   logLevel: logLevel.WARN,
   retry: {
     initialRetryTime: 300,
-    retries: 10
+    retries: 10,
   },
 });
 

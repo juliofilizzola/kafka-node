@@ -1,20 +1,21 @@
-import { IProducer } from "kafka/dtos";
-import kafka from "../../kafka-setup"
+import { IProducer } from 'kafka/dtos';
+import kafka from '../../kafka-setup';
 
-const producer = kafka.producer()
+const producer = kafka.producer();
 
-async function run () {
-  await producer.connect()
+async function run() {
+  await producer.connect();
 }
-run().catch(console.error)
+run().catch(console.error);
 
-const producerService = async ({topic, message}: IProducer): Promise<void> => {
-  console.log({topic, message});
-  
+const producerService = async ({
+  topic,
+  message,
+}: IProducer): Promise<void> => {
   await producer.send({
     topic,
     messages: message,
-  })
+  });
 
   // await producer.disconnect();
 };
