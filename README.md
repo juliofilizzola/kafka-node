@@ -37,7 +37,7 @@ Para esse projeto é necessário você ter o docker-compose em sua maquina.
 
 Clone o repositório.
 
-`git clone https://github.com/juliofilizzola/kafka-node-studies.git `
+`git clone https://github.com/juliofilizzola/kafka-node.git `
 
 Entre no diretório
 
