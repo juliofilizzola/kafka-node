@@ -4,6 +4,12 @@
 
 **Apache Kafka** é uma plataforma open-source de processamento de streams desenvolvida pela Apache Software Foundation, escrita em Scala e Java. 
 
+
+
+[TOC]
+
+
+
 ## Proposito
 
 Nesse repositório, está contido o estudo sobre a estrutura do Apache Kafka no Typescript, utilizando a biblioteca kakfajs.
