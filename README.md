@@ -1,5 +1,7 @@
 # Kafka em NodeJS
 
+![Kafka](https://www.grandeporte.com.br/img/blog/kafka/kafka.jpg)
+
 **Apache Kafka** é uma plataforma open-source de processamento de streams desenvolvida pela Apache Software Foundation, escrita em Scala e Java. 
 
 ## Proposito
@@ -42,4 +44,8 @@ Instale as dependências
 ou 
 
 `npm install`
+
+Depois suba o conteiner do Kafka no docker-compose.
+
+`docker-composer up`
 
