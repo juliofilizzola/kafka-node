@@ -1,10 +1,11 @@
 import kafka from '../../kafka-setup';
+import loadConsumer from './loadConsumer';
 
 const consumerService = async (): Promise<void> => {
   const consumer = kafka.consumer({ groupId: 'test-group' });
 
   await consumer.connect();
-  const s = await consumer.subscribe({
+  await consumer.subscribe({
     topic: 'kafka-studies',
     fromBeginning: true,
   });
@@ -12,7 +13,7 @@ const consumerService = async (): Promise<void> => {
   await consumer.run({
     eachMessage: async ({ topic, partition, message }) => {
       const log = `${topic}[${partition} | ${message.offset}] / ${message.timestamp}`;
-      console.log(`- ${log} ${message.key}#${message.value}`);
+      loadConsumer(log);
     },
   });
 };
