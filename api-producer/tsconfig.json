@@ -47,7 +47,10 @@
     "paths": {
       "@config/*": ["src/config/*"],
       "@modules/*": ["src/modules/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@kafka/*": ["src/kafka/*"],
+      "@kafka-setup/*": ["src/kafka-setup/*"],
+      "@database/*": ["src/database/*"],
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     "typeRoots": [
