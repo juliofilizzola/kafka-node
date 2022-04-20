@@ -6,7 +6,8 @@ class ConsumerController {
   async execute(req: Request, res: Response) {
     const consumer = container.resolve(ConsumerService);
     const result = consumer.execute();
-    return result;
+
+    res.json(result);
   }
 }
 

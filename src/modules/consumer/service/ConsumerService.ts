@@ -1,4 +1,4 @@
-import consumerService from 'kafka/consumer/consumer';
+import consumerService from 'src/kafka/consumer/consumer';
 
 class ConsumerService {
   async execute() {
