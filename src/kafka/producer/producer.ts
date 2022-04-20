@@ -17,7 +17,7 @@ const producerService = async ({
     messages: message,
   });
 
-  await producer.disconnect();
+  // await producer.disconnect();
 };
 
 export default producerService;
