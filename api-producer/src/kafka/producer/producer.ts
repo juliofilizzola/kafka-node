@@ -1,5 +1,5 @@
-import { IProducer } from '../dtos';
-import kafka from '../../kafka-setup';
+import kafka from '@kafka-setup/kafka';
+import { IProducer } from '@kafka/dtos';
 
 const producer = kafka.producer();
 

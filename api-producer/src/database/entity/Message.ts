@@ -9,19 +9,19 @@ import {
 @Entity('Message')
 class Message {
   @PrimaryGeneratedColumn('uuid')
-    id: number;
+  id: number;
 
   @Column({ length: 100 })
-    message: string;
+  message: string;
 
   @Column()
-    key: string;
+  key: string;
 
   @CreateDateColumn()
-    created_at: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-    updated_at: Date;
+  updated_at: Date;
 }
 
 export default Message;
