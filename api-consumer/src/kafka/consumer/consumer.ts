@@ -1,4 +1,5 @@
-import kafka from '../../kafka-setup';
+import kafka from '@kafka-setup/kafka';
+import { EachMessagePayload } from 'kafkajs';
 import loadConsumer from './loadConsumer';
 
 const consumerService = async (): Promise<void> => {
@@ -11,7 +12,7 @@ const consumerService = async (): Promise<void> => {
   });
 
   await consumer.run({
-    eachMessage: async ({ topic, partition, message }) => {
+    eachMessage: async ({ topic, partition, message }: EachMessagePayload) => {
       const log = `${topic}[${partition} | ${message.offset}] / ${message.timestamp}`;
       loadConsumer({ log, message });
     },
