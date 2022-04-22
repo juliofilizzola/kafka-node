@@ -1,6 +1,6 @@
 import { Kafka, logLevel } from 'kafkajs';
 
-const kafka = new Kafka({
+export const kafka = new Kafka({
   clientId: 'kafka-studies',
   brokers: ['localhost:9092', 'localhost:9092'],
   logLevel: logLevel.WARN,
@@ -10,4 +10,4 @@ const kafka = new Kafka({
   },
 });
 
-export default kafka;
+export const admin = kafka.admin();
