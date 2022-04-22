@@ -12,6 +12,9 @@ class Product {
   id: string;
 
   @Column()
+  topic: string;
+
+  @Column()
   message: string;
 
   @Column()
