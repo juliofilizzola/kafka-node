@@ -18,6 +18,10 @@ export class Messages1650474949044 implements MigrationInterface {
             type: 'varchar',
           },
           {
+            name: 'topic',
+            type: 'varchar',
+          },
+          {
             name: 'key',
             type: 'varchar',
           },
