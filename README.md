@@ -10,6 +10,7 @@
   - [Dependências Utilizadas](#dependências-utilizadas)
   - [Como Iniciar](#como-iniciar)
   - [Rotas](#rotas)
+  - [Banco de Dados](#banco-de-dados)
 
 
 ## Proposito
@@ -23,7 +24,7 @@ Vamos simular uma API que vai criar as mensagens e outra API que vai consumir es
 - Typescript
 - Docker
 - Docker-Composer
-- Node => 8
+- Node[^1]
 - Eslint
 - Prettier
 - Express
@@ -116,8 +117,20 @@ A Requisição é um metodo post, com o body com o seguinte formato.
 
 ```
 
+## Banco de dados
 
-Fique a vontade para alterar[^note].
+Na api-consumer, tem um banco de dados POSTGRES, recomendo fortemente a utlização do dbeaver.
 
-[^note]:
+Rode as migrations do typeorm utilizando esse comando:
+
+`npm run typeorm migration:run`
+
+***
+
+Fique a vontade para alterar[^0].
+
+[^0]:
     Feito Por @juliofilizzola, qualquer alteração nesse repositório que você ache nescessario, abra uma Issues.
+
+[^1]:
+    Recomendação utlizar a da versão 8 ou maior do node.
