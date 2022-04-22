@@ -29,7 +29,7 @@ Vamos simular uma API que vai criar as mensagens e outra API que vai consumir es
 - Prettier
 - Express
 - Tsyringe
-- Typeorm
+- Typeorm[^2]
 - Cors
 - Kafka
 - Kafkajs
@@ -104,10 +104,10 @@ A Requisição é um metodo post, com o body com o seguinte formato.
 ```json
 
 {
-    "topic": "kafka-studies",
+    "topic": "kafka-studies", // nome do topic
     "message": [{
-        "value": "Pix",
-        "key": "Talvez",
+        "value": "assunto",
+        "key": "a key da mensagem",
         "headers": {
             "url": "https://github.com/juliofilizzola/kafka-node",
             "meta": "algum dado."
@@ -129,8 +129,8 @@ Rode as migrations do typeorm utilizando esse comando:
 
 Fique a vontade para alterar[^0].
 
-[^0]:
-    Feito Por @juliofilizzola, qualquer alteração nesse repositório que você ache nescessario, abra uma Issues.
+[^0]: Feito Por @juliofilizzola, qualquer alteração nesse repositório que você ache nescessario, abra uma Issues.
 
-[^1]:
-    Recomendação utlizar a da versão 8 ou maior do node.
+[^1]: Recomendação utlizar a da versão 8 ou maior do node.
+   
+[^2]: A versão utilizada do Typeorm é a 0.2.29, caso queira atualizar a versão superio, recomendo fazer as adapções necessárias.
