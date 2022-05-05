@@ -9,6 +9,7 @@ interface IConsumer {
 export class consumerREADServices {
   async index({ msg, topic }: IConsumer) {
     const msgRepo = getCustomRepository(MessageRepository);
+
     const data = {
       key: msg.key ? msg.key.toString('utf-8') : 'not key',
       value: msg.value ? msg.value.toString('utf-8') : 'not value',
@@ -17,7 +18,7 @@ export class consumerREADServices {
       topic: topic,
     };
 
-    const msgSave = msgRepo.create(data);
-    await msgRepo.save(msgSave);
+    // const msgSave = msgRepo.create(data);
+    // await msgRepo.save(msgSave);
   }
 }

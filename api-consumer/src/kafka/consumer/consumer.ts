@@ -26,7 +26,7 @@ const consumerService = async (): Promise<void> => {
   });
 
   await consumer.subscribe({
-    topic: 'Pix-06783',
+    topic: 'Pix-069-83',
     fromBeginning: true,
   });
 
@@ -35,6 +35,8 @@ const consumerService = async (): Promise<void> => {
       const log = `${topic}[${partition} | ${
         message.offset
       }] / ${topic} - ${Date.now()}`;
+      console.log(message.value?.toString(), 'message');
+
       loadConsumer({ log, message, topic });
     },
   });

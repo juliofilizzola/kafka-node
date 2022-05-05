@@ -15,16 +15,16 @@ const producerService = async (data: IProducer[]): Promise<void> => {
 
   try {
     data.map(async ({ topic, message }) => {
-      const verifyTopic = list.some((data) => data === topic);
-      console.log(verifyTopic);
+      // const verifyTopic = list.some((data) => data === topic);
+      // console.log(verifyTopic);
 
-      if (!verifyTopic) {
-        await admin.createTopics({
-          topics: [{ topic }],
-        });
-      }
+      // if (!verifyTopic) {
+      //   await admin.createTopics({
+      //     topics: [{ topic }],
+      //   });
+      // }
 
-      console.log({ topic, message });
+      // console.log({ topic, message });
       await producer.send({
         topic,
         messages: message,
