@@ -2,8 +2,8 @@ import { IProducer } from '@kafka/dtos';
 import producerService from '@kafka/producer/producer';
 
 class CreateProduce {
-  async execute({ topic, message }: IProducer) {
-    const Produce = producerService({ topic, message });
+  async execute(data: IProducer[]) {
+    const Produce = producerService(data);
     return Produce;
   }
 }

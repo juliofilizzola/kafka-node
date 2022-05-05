@@ -2,7 +2,7 @@ import { Kafka, logLevel } from 'kafkajs';
 
 const kafka = new Kafka({
   clientId: 'kafka-studies',
-  brokers: ['localhost:9092'],
+  brokers: ['localhost:9092', 'localhost:9092'],
   logLevel: logLevel.WARN,
   // ssl: true,
   // sasl: {

@@ -11,7 +11,11 @@ class Message {
   @PrimaryGeneratedColumn('uuid')
     id: number;
 
-  @Column({ length: 100 })
+  @Column()
+  topic: string;
+
+
+  @Column()
     message: string;
 
   @Column()

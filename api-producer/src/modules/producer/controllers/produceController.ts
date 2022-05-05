@@ -5,8 +5,8 @@ import CreateProduce from '../services/CreateProduceService';
 class ProduceController {
   async execute(req: Request, res: Response) {
     const produce = container.resolve(CreateProduce);
-    const { topic, message } = req.body;
-    produce.execute({ topic, message });
+    const data = req.body;
+    produce.execute(data);
     return res.json({ value: true });
   }
 }
